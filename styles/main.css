@@ -1,0 +1,240 @@
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: "Cabin", sans-serif;
+}
+
+body {
+  background-color: #faf6ed;
+  overflow-x: hidden;
+}
+
+a {
+  color: #3e373f;
+}
+section {
+  position: relative;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.nav-items a {
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+.nav-items a:visited {
+  color: #3e373f;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.nav-items a:last-child {
+  margin-right: 0;
+}
+
+.header-circle {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  overflow: hidden;
+}
+
+#my-container {
+  width: 500px;
+  height: 220px;
+  background-color: white;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 5;
+  bottom: -20%;
+}
+
+.books-list {
+}
+
+.books-list a:not(:first-child) {
+  margin-left: 25px;
+}
+
+.books-list-row {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.apps-list-row div:not(:first-child) {
+  margin-left: 25px;
+}
+
+.apps-list-row {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.app-square {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.apps-container {
+  position: relative;
+}
+
+.background-circle {
+  position: absolute;
+  width: 50%;
+  right: -30%;
+  top: +30%;
+  z-index: -2;
+}
+
+.background-circle2 {
+  position: absolute;
+  width: 40%;
+  right: -30%;
+  top: -80%;
+  z-index: -2;
+}
+
+.background-circle3 {
+  position: absolute;
+  width: 30%;
+  left: -25%;
+  top: -20%;
+  z-index: -2;
+}
+
+/* ############################### 
+COLOURS
+############################### */
+
+.darkpurple {
+  color: #3e373f;
+}
+
+.p-gray {
+  color: #726d73;
+}
+
+.blogpost {
+  transition: 0.25s ease;
+}
+
+.blogpost:hover {
+  -webkit-transition: all 350ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 350ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateX(5px);
+}
+
+.books-list-row img {
+  width: 285px;
+  height: auto;
+}
+
+h2::before {
+  display: block;
+  content: " ";
+  margin-top: -110px;
+  height: 110px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ###################
+  MEDIA QUERIES
+ ################### */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  section {
+    overflow: hidden;
+  }
+  .container {
+    max-width: 80%;
+  }
+  .container h2 {
+    max-width: 70%;
+    font-size: 32px;
+    margin: 0 auto;
+  }
+  .books-list-row {
+    display: block;
+  }
+
+  .books-list a {
+    display: block;
+    margin-top: 25px;
+    margin: 0 auto;
+  }
+
+  .app-square {
+    display: block;
+    width: 100%;
+  }
+}
