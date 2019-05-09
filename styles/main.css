@@ -73,17 +73,14 @@ header {
 .books-list {
 }
 
-.books-list a:not(:first-child) {
+.books-list a {
+  margin-bottom: 25px;
   margin-left: 25px;
 }
 
 .books-list-row {
   margin: 0 auto;
   margin-bottom: 25px;
-}
-
-.apps-list-row div:not(:first-child) {
-  margin-left: 25px;
 }
 
 .apps-list-row {
@@ -96,6 +93,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  max-width: 285px;
+  margin-left: 25px;
+  margin-bottom: 25px;
 }
 
 .apps-container {
