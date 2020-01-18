@@ -10,65 +10,65 @@
 //     target.style.transform = 'translate3d(px' + rate + 'px, 0 px)';
 // });
 
-var parallaxElement1 = $("#my-container"),
+var parallaxElement1 = $('#my-container'),
   parallaxQuantity = parallaxElement1.length;
 
-$(window).on("scroll", function() {
+$(window).on('scroll', function() {
   window.requestAnimationFrame(function() {
     for (var i = 0; i < parallaxQuantity; i++) {
       var currentElement = parallaxElement1.eq(i);
       var scrolled = $(window).scrollTop();
 
       currentElement.css({
-        transform: "translate3d(0," + scrolled * 0.2 + "px, 0)"
+        transform: 'translate3d(0,' + scrolled * 0.3 + 'px, 0)'
       });
     }
   });
 });
 
-var parallaxElement2 = $(".background-circle"),
+var parallaxElement2 = $('.background-circle'),
   parallaxQuantity = parallaxElement2.length;
 
-$(window).on("scroll", function() {
+$(window).on('scroll', function() {
   window.requestAnimationFrame(function() {
     for (var i = 0; i < parallaxQuantity; i++) {
       var currentElement = parallaxElement2.eq(i);
       var scrolled = $(window).scrollTop();
 
       currentElement.css({
-        transform: "translate3d(0," + scrolled * 0.15 + "px, 0)"
+        transform: 'translate3d(0,' + scrolled * 0.3 + 'px, 0)'
       });
     }
   });
 });
 
-var parallaxElement3 = $(".background-circle2"),
+var parallaxElement3 = $('.background-circle2'),
   parallaxQuantity = parallaxElement3.length;
 
-$(window).on("scroll", function() {
+$(window).on('scroll', function() {
   window.requestAnimationFrame(function() {
     for (var i = 0; i < parallaxQuantity; i++) {
       var currentElement = parallaxElement3.eq(i);
       var scrolled = $(window).scrollTop();
 
       currentElement.css({
-        transform: "translate3d(0," + scrolled * 0.35 + "px, 0)"
+        transform: 'translate3d(0,' + scrolled * 0.35 + 'px, 0)'
       });
     }
   });
 });
 
-var parallaxElement4 = $(".background-circle3"),
+var parallaxElement4 = $('.background-circle3'),
   parallaxQuantity = parallaxElement4.length;
 
-$(window).on("scroll", function() {
+$(window).on('scroll', function() {
   window.requestAnimationFrame(function() {
     for (var i = 0; i < parallaxQuantity; i++) {
       var currentElement = parallaxElement4.eq(i);
       var scrolled = $(window).scrollTop();
 
       currentElement.css({
-        transform: "translate3d(0," + scrolled * 0.1 + "px, 0)"
+        transform: 'translate3d(0,' + scrolled * 0.1 + 'px, 0)'
       });
     }
   });

@@ -2,17 +2,17 @@ console.clear();
 
 const NUMBER_OF_SEGMENTS = 8;
 const SEGMENTS_MIN_RADIUS = 100;
-const SEGMENTS_MAX_RADIUS = 300;
+const SEGMENTS_MAX_RADIUS = 250;
 const ORIGIN_POINT = {
-  x: 250,
-  y: 270
+  x: 230,
+  y: 230
 };
 const SHAPE_MOVEMENT_ALLOWED_RADIUS = {
   min: 0.02,
-  max: 0.08
+  max: 0.05
 };
 const LINE_WIDTH = 7;
-const LINE_COLOR = "rgba(218, 186, 114, 1)";
+const LINE_COLOR = 'rgba(218, 186, 114, 1)';
 
 class CircleSegment {
   constructor(radius, numberOfSegments) {
@@ -78,23 +78,37 @@ class CircleAnimation {
 
 let oldTime = 0;
 
-const domElement = document.querySelector("#my-container");
+const domElement = document.querySelector('#my-container');
 
-const canvas = document.createElement("canvas");
+const canvas = document.createElement('canvas');
 domElement.appendChild(canvas);
 
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext('2d');
 
-const dpr = window.devicePixelRatio || 1;
+const dpr = window.devicePixelRatio || 2;
 const {
   width: domElWidth,
   height: domElHeight
 } = domElement.getBoundingClientRect();
 
-canvas.width = domElWidth * dpr;
-canvas.height = domElHeight * dpr;
-canvas.style.width = `${domElWidth}px`;
-canvas.style.height = `${domElHeight}px`;
+console.log(dpr);
+
+if (dpr <= 1) {
+  canvas.width = domElWidth * dpr;
+  canvas.height = domElHeight * dpr;
+  canvas.style.width = `${domElWidth}px`;
+  canvas.style.height = `${domElHeight}px`;
+} else if (dpr <= 2) {
+  canvas.width = (domElWidth / 2) * dpr;
+  canvas.height = (domElHeight / 2) * dpr;
+  canvas.style.width = `${domElWidth}px`;
+  canvas.style.height = `${domElHeight}px`;
+} else {
+  canvas.width = (domElWidth / 3) * dpr;
+  canvas.height = (domElHeight / 3) * dpr;
+  canvas.style.width = `${domElWidth}px`;
+  canvas.style.height = `${domElHeight}px`;
+}
 
 const circleAnimationEffect = new CircleAnimation();
 
