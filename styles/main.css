@@ -230,9 +230,9 @@ img {
 
 .background-circle {
   position: absolute;
-  width: 25%;
-  right: -10%;
-  top: +30%;
+  width: 15%;
+  right: +20%;
+  top: +35%;
   z-index: -2;
 }
 
@@ -314,6 +314,37 @@ h2::before {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .app {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 6px 49px 111px -73px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-out;
+    transform: translateY(0%);
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .app-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .apps {
+    flex-direction: column;
+  }
+
+  .apps:last-child {
+    margin-right: 0;
+  }
 }
 
 /* 
