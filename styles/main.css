@@ -326,6 +326,11 @@ h2::before {
         margin: 0 auto;
     }
 
+    .footer-container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
     .books-list-row {
         display: block;
     }
